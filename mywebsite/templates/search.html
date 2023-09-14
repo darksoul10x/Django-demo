@@ -21,23 +21,21 @@
     <table align="center" style="margin: 0px auto;">
         <thead>
             <tr>
-                <th>Blog ID</th>
+                <th>ID</th>
                 <th>Title</th>
                 <th>Author</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Edit Blog</th>
-                <th>Remove Blog</th>
+                <th>Content</th>
+                <th>URL</th>
             </tr>
         </thead>
         <tbody>
             {% for blog in blogs %}
             <tr>
-                <td>{{blog.BlogId}}</td>
+                <td>{{blog.Id}}</td>
                 <td>{{blog.Title}}</td>
-                <td>{{blog.Author_Name}}</td>
-                <td>{{blog.Start_Date}}</td>
-                <td>{{blog.End_Date}}</td>
+                <td>{{blog.Author}}</td>
+                <td>{{blog.Content}}</td>
+                <td>{{blog.URL}}</td>
                 <td>
                     <a href="/update/{{blog.pk}}">Update</a>    
                 </td>
