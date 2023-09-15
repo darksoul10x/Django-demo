@@ -10,7 +10,7 @@ def create_blog(request):
         if form.is_valid():
             try:
                 form.save()
-                return redirect('search/')
+                return redirect('/')
             except:
                 pass
     else:
@@ -33,7 +33,7 @@ def update_blog(request,pk):
         form = BlogForm(request.POST, instance=blogs)
         if form.is_valid():
             form.save()
-            return redirect('/search')
+            return redirect('/')
 
     context = {
         'blogs': blogs,
@@ -48,7 +48,7 @@ def delete_blog(request, pk):
 
     if request.method == 'POST':
         blogs.delete()
-        return redirect('/search')
+        return redirect('/')
 
     context = {
         'blogs': blogs,
